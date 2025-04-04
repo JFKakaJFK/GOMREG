@@ -302,8 +302,6 @@ cdef class FCREGBBO(BBOFitnessFunction):
         for v in volumes:
             _volumes.push_back(<double>v)
 
-        print(_volumes, volumes)
-
         self.c_inst_realvalued = new FCREGBBO_t(expression_idx, _ages, _volumes, value_to_reach)
         self.number_of_variables = self.c_inst_realvalued.getNumberOfVariables()
         self.value_to_reach = self.c_inst_realvalued.getVTR()
