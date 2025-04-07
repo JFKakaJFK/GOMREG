@@ -60,7 +60,7 @@ FCREGBBO_t::constraintFunction(vec_t<double>& variables)
   }
 
   // double v0_deviation = std::max(0.0, std::abs(vs[0] - 0.005) - 0.005);
-  double v0_deviation = std::max(0.0, vs[0] - 0.001);
+  double v0_deviation = std::max(0.0, vs[0] - 0.01);
   double v100_deviation = std::max(0.0, vs[N] - 1500.0);
 
   double cv = v0_deviation + v100_deviation + sum_of_decreases;
